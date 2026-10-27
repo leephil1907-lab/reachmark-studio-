@@ -1,0 +1,79 @@
+/* Import once at the application root. Tokens are semantic so themes can evolve safely. */
+:root {
+  color-scheme: dark;
+  --rm-color-lime: #D6F269;
+  --rm-color-charcoal: #101510;
+  --rm-color-moss: #202820;
+  --rm-color-ivory: #F5F6F0;
+  --rm-color-sage: #8A9A78;
+  --rm-color-muted: #A7B0A0;
+  --rm-color-border: rgb(245 246 240 / 12%);
+  --rm-color-border-strong: rgb(245 246 240 / 22%);
+  --rm-color-surface: #171D17;
+  --rm-color-surface-raised: #202820;
+  --rm-color-danger: #FF8C83;
+  --rm-color-success: #B9E7A2;
+  --rm-color-focus: #D6F269;
+  --rm-font-display: "DM Sans", "Avenir Next", Avenir, sans-serif;
+  --rm-font-body: "Inter", "Segoe UI", sans-serif;
+  --rm-font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  --rm-text-xs: 0.75rem;
+  --rm-text-sm: 0.875rem;
+  --rm-text-md: 1rem;
+  --rm-text-lg: 1.125rem;
+  --rm-text-xl: clamp(1.25rem, 2vw, 1.5rem);
+  --rm-text-display: clamp(2.6rem, 7vw, 6.8rem);
+  --rm-leading-tight: 0.98;
+  --rm-leading-body: 1.55;
+  --rm-space-1: 0.25rem;
+  --rm-space-2: 0.5rem;
+  --rm-space-3: 0.75rem;
+  --rm-space-4: 1rem;
+  --rm-space-5: 1.25rem;
+  --rm-space-6: 1.5rem;
+  --rm-space-8: 2rem;
+  --rm-space-10: 2.5rem;
+  --rm-space-12: 3rem;
+  --rm-space-16: 4rem;
+  --rm-space-24: 6rem;
+  --rm-radius-sm: 0.5rem;
+  --rm-radius-md: 0.875rem;
+  --rm-radius-lg: 1.25rem;
+  --rm-radius-xl: 1.75rem;
+  --rm-radius-pill: 999px;
+  --rm-shadow-panel: 0 24px 80px rgb(0 0 0 / 28%);
+  --rm-shadow-glow: 0 0 64px rgb(214 242 105 / 10%);
+  --rm-motion-fast: 140ms;
+  --rm-motion-base: 220ms;
+  --rm-motion-slow: 420ms;
+  --rm-ease-standard: cubic-bezier(0.2, 0.75, 0.25, 1);
+  --rm-ease-enter: cubic-bezier(0.16, 1, 0.3, 1);
+  --rm-content-width: 76rem;
+  --rm-page-gutter: clamp(1rem, 4vw, 3.5rem);
+}
+html {
+  background: var(--rm-color-charcoal);
+  color: var(--rm-color-ivory);
+  font-family: var(--rm-font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+*, *::before, *::after { box-sizing: border-box; }
+:focus-visible { outline: 2px solid var(--rm-color-focus); outline-offset: 3px; }
+::selection { color: var(--rm-color-charcoal); background: var(--rm-color-lime); }
+.rm-display {
+  font-family: var(--rm-font-display);
+  font-size: var(--rm-text-display);
+  font-weight: 500;
+  letter-spacing: -0.075em;
+  line-height: var(--rm-leading-tight);
+}
+.rm-muted { color: var(--rm-color-muted); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
