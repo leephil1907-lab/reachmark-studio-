@@ -7,7 +7,10 @@
     "node": ">=20"
   },
   "scripts": {
-    "typecheck": "pnpm --filter @reachmark/design-system typecheck"
+    "dev": "pnpm --filter @reachmark/studio dev",
+    "build": "pnpm --filter @reachmark/studio build",
+    "preview": "pnpm --filter @reachmark/studio preview",
+    "typecheck": "pnpm --filter @reachmark/design-system typecheck && pnpm --filter @reachmark/studio typecheck"
   },
   "devDependencies": {
     "typescript": "^5.7.3"
